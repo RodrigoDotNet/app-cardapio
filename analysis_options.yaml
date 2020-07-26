@@ -1,0 +1,42 @@
+include: package:pedantic/analysis_options.yaml
+analyzer:
+  errors:
+    # treat missing required parameters as an error 
+    missing_required_param: error
+    # treat missing returns as an error
+    missing_return: error
+    # allow having TODOs in the code
+    todo: ignore
+  exclude:
+    # the following two are relative to the stocks example and the flutter package respectively
+    # see https://github.com/dart-lang/sdk/issues/28463
+    - "build/**" 
+    - ".ios/**" 
+    - ".android/**" 
+    - ".idea/**" 
+    - ".dart_tool/**" 
+    - ".settings/**"
+    - "test/**"
+    - "assets/**"
+  strong-mode:
+    implicit-casts: false
+    implicit-dynamic: false
+    
+
+linter:
+  rules:
+    - camel_case_types
+    - always_declare_return_types
+    - avoid_empty_else
+    - avoid_returning_null_for_void
+    - avoid_unused_constructor_parameters
+    - avoid_init_to_null
+    - avoid_returning_null
+    - empty_catches
+    - avoid_print
+    - empty_statements
+    - prefer_single_quotes
+    - unnecessary_new
+    - unnecessary_string_interpolations
+    - unnecessary_string_escapes
+    - package_names
